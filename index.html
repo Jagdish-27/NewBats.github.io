@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery - how to create image gallery</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .product-small-img img{
+            height: 92px;
+            margin: 10px 0;
+            cursor: pointer;
+            display: block;
+            opacity: .6;
+            
+        }
+        .product-small-img img:hover{
+            opacity: 1;
+        }
+        .product-small-img {
+            float: left;
+        }
+        .product{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            position: absolute;
+        }
+        .img-container img{
+            height: 500px;
+        }
+        .img-container{
+            float: right;
+            padding: 10px;
+            /* border: 2px solid black; */
+            background: #000;
+        }
+        .text{
+            color: crimson;
+            text-align: center;
+        }
+
+        @media(min-width: 320px)and (max-width: 468px){
+
+            .product{
+                display: flex;
+                flex-direction: column;
+            }
+        
+            .product-small-img img{
+            height: 45px;
+            margin: 10px 0;
+            cursor: pointer;
+            display: block;
+            opacity: .6;
+            
+            }
+
+            .product-small-img {
+                margin: 10px auto;
+            }
+
+            .img-container img{
+            height: 160px;
+            }
+            .img-container{
+            padding: 10px;
+            /* border: 2px solid black; */
+            background: #000;
+            }
+        }
+
+        @media(min-width: 469px)and (max-width: 700px){
+            .text{
+                font-size: 30px;
+            }
+            .product{
+                display: flex;
+                flex-direction: column;
+            }
+        
+            .product-small-img img{
+            height: 49px;
+            margin: 10px 0;
+            cursor: pointer;
+            display: block;
+            opacity: .6;
+            
+            }
+
+            .product-small-img {
+                margin: 10px auto;
+            }
+
+            .img-container img{
+            height: 160px;
+            }
+            .img-container{
+            padding: 10px;
+            /* border: 2px solid black; */
+            background: #000;
+            }
+        }
+        @media(min-width :701px) and (max-width: 1023px){
+            .text{
+                font-size: 35px;
+            }
+            .product-small-img img{
+            height: 58px;
+            margin: 10px 0;
+            cursor: pointer;
+            display: block;
+            opacity: .6;
+            
+            }
+            .product-small-img {
+            float: left;
+            }
+
+            .img-container img{
+            height: 250px;
+            }
+        .img-container{
+            float: right;
+            padding: 10px;
+            /* border: 2px solid black; */
+            background: #000;
+            }
+        }
+        @media(min-width: 1024px){
+            .text{
+                font-size: 40px;
+                margin-bottom: 15px;
+            }
+            .product-small-img img{
+            height: 85px;
+            margin: 10px 0;
+            cursor: pointer;
+            display: block;
+            opacity: .6;
+            
+            }
+            .product-small-img {
+            float: left;
+            }
+
+            .img-container img{
+            height: 400px;
+            }
+            .img-container{
+            float: right;
+            padding: 10px;
+            /* border: 2px solid black; */
+            background: #000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="product">
+        <h1 class="text">Powerful Bats</h1>
+        <div class="product-small-img">
+            <img src="images/img-1.jpg" onclick="myFunction(this)">
+            <img src="images/img-2.jpg" onclick="myFunction(this)">
+            <img src="images/img-3.jpeg"onclick="myFunction(this)">
+            <img src="images/img-4.jpg" onclick="myFunction(this)">
+            <img src="images/img-5.jpg" onclick="myFunction(this)">
+        </div>
+        <div class="img-container">
+            <img id="imageBox" src="images/img-1.jpg" onclick="myFunction(this)" >
+        </div>
+    </div>
+
+
+    <script>
+
+        // function myFunction(smallimg){
+        //     var fullimg = document.getElementById("imageBox");
+        //     fullimg.src = smallimg.src;
+        // }
+
+        function myFunction(smallimg){
+            var fullimg = document.getElementById("imageBox");
+            fullimg.src = smallimg.src;
+        }
+
+    </script>
+</body>
+</html>
